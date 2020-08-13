@@ -13,8 +13,7 @@ MonoBehaviour:
   m_Name: Player Difficulty
   m_EditorClassIdentifier: 
   startingLives: 3
-  ballPushVector: {x: 6, y: 2}
-  ballSize: 1
-  ballSpeed: 0
+  ballPushVector: {x: 7, y: 3}
+  ballSize: 1.5
   ballHitIncrementValue: 0.01
   autoPlay: 0

@@ -14,14 +14,12 @@ namespace Pong.Data.Core
         [Header("Ball")] [Tooltip("Ball's speed")]
         [SerializeField] private Vector2 ballPushVector;
         [SerializeField] private float ballSize;
-        [SerializeField] private float ballSpeed;
         [SerializeField] private float ballHitIncrementValue;
         [SerializeField] private bool autoPlay;
 
         public int StartingLives => startingLives;
         public float BallHitIncrementValue => ballHitIncrementValue;
         public float BallSize => ballSize;
-        public float BallSpeed => ballSpeed;
         public Vector2 BallPushVector => ballPushVector;
         public bool AutoPlay => autoPlay;
     }

@@ -75,7 +75,9 @@ namespace Pong.Logic.Mechanics
             if (Input.GetButton("Launch") && hasStarted == false)
             {
                 hasStarted = true;
-                rBody2D.velocity = difficultyLevel.BallPushVector;
+                bool up = Random.Range(0, 2) == 0 ? false : true;
+                rBody2D.velocity = new Vector2(difficultyLevel.BallPushVector.x, up ? difficultyLevel.BallPushVector.y : -difficultyLevel.BallPushVector.y);
+
             }
         }
 

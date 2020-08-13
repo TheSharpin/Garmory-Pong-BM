@@ -48,9 +48,12 @@ namespace Pong.UI.HUD
 
         private void Update()
         {
-            if (Input.GetButtonDown("Open Menu") && GameManager.Instance.GameMode == GameModeEnum.Play)
+            if (Input.GetButtonDown("Open Menu") && (GameManager.Instance.GameMode == GameModeEnum.Play
+                || GameManager.Instance.GameMode == GameModeEnum.Pause))
             {
-                pauseMenu.SetActive(!gameOverWindow.activeSelf);
+                pauseMenu.SetActive(!pauseMenu.activeSelf);
+
+                AudioManager.Instance.PlayUISFX(UISFXEnum.Click);
 
                 if (pauseMenu.activeSelf)
                 {
